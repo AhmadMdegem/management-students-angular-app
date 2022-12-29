@@ -1,0 +1,107 @@
+<form class="form" [formGroup]="studentForm" (ngSubmit)="addStudent()">
+  <div class="alert alert-primary text-center font-weight-bold" role="alert">
+    Student Details
+  </div>
+  <div>
+    <label for="fname">First Name</label>
+    <input
+      type="text"
+      id="fname"
+      formControlName="firstName"
+      placeholder="Enter First Name"
+    />
+    <p class="text-danger">
+      {{ errorsFirstName }}
+    </p>
+  </div>
+  <div>
+    <label for="lname">Last Name</label>
+    <input
+      type="text"
+      id="lname"
+      formControlName="lastName"
+      placeholder="Enter Last Name"
+    />
+    <p class="text-danger">
+      {{ errorslastName }}
+    </p>
+  </div>
+  <div>
+    <label for="age">Age</label>
+    <input
+      type="number"
+      id="age"
+      formControlName="age"
+      placeholder="Enter age (18-120)"
+    />
+    <p class="text-danger">
+      {{ errorsAge }}
+    </p>
+  </div>
+  <div class="input-group mb-3">
+    <label for="course">Course</label>
+    <select id="course" formControlName="course">
+      <option *ngFor="let course of courses" [value]="course">
+        {{ course }}
+      </option>
+    </select>
+    <p class="text-danger">{{ errorsCourse }}</p>
+  </div>
+  <div>
+    <label for="averge">Averge ({{ getStudent.averge.value }})</label>
+    <input
+      type="range"
+      id="averge"
+      min="0"
+      value="50"
+      max="100"
+      formControlName="averge"
+    />
+  </div>
+  <div>
+    <label for="email">Email</label>
+    <input
+      type="email"
+      id="email"
+      formControlName="email"
+      placeholder="Email"
+    />
+    <p class="text-danger">
+      {{ errorsEmail }}
+    </p>
+  </div>
+  <div>
+    <label for="balance">Balance</label>
+    <input
+      type="number"
+      id="balance"
+      formControlName="balance"
+      placeholder="Student balance/debt "
+    />
+    <p class="text-danger">{{ errorsBalance }}</p>
+  </div>
+  <div>
+    <label for="progress">Progress ({{ getStudent.progress.value }})</label>
+    <input
+      type="range"
+      id="progress"
+      min="0"
+      max="100"
+      formControlName="progress"
+    />
+  </div>
+  <div>
+    <label for="imgUrl">change img</label>
+    <img
+      src="https://th.bing.com/th/id/R.d1bfe733a1fa3171b259f8483ab68623?rik=C51ya4w%2fFLFcuA&riu=http%3a%2f%2fcoloringpage.eu%2fwp-content%2fuploads%2f2018%2f04%2fstudent-boy-graduate.jpg&ehk=bWjYy6ukB4m5BaC2Y%2fsSnD8VIE%2foGgEkFeR7YE9GDqE%3d&risl=&pid=ImgRaw&r=0"
+      id="imgUrl"
+    />
+    <input type="text" formControlName="imgUrl" />
+  </div>
+
+  <div class="d-flex justify-content-center mt-2">
+    <button type="submit" class="btn btn btn-primary w-100 text-center">
+      Save Changes
+    </button>
+  </div>
+</form>

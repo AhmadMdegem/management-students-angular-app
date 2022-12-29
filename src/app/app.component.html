@@ -1,0 +1,24 @@
+<app-header class="text-center"></app-header>
+
+<div class="row">
+  <app-list-students
+    class="col-md-3"
+    (chooseSelectStudent)="chooseSelectStudent($event)"
+    [students]="students"
+  ></app-list-students>
+
+  <app-student-card
+    *ngIf="selectStudent"
+    class="col-md-4"
+    [selectStudent]="selectStudent"
+    (editDetails)="onEditDetails($event)"
+  ></app-student-card>
+
+  <app-add-new-student
+    class="col-md-5"
+    (studentAfterEdit)="OnSaveChanges($event)"
+    [openToEdit]="openToEdit"
+    [studentToEdit]="selectStudent"
+    (addNewStudent)="addNewStudent($event)"
+  ></app-add-new-student>
+</div>

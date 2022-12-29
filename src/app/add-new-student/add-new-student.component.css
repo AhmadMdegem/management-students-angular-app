@@ -1,0 +1,68 @@
+h2 {
+  text-align: center;
+  color: black;
+  text-shadow: 2px 2px blue;
+}
+
+.form {
+  margin: auto;
+  border: 2px solid #5B68FF;
+  padding: 10px;
+}
+
+
+
+input ,select {
+display: flex;
+width:100%;
+}
+
+input[type=submit] {
+  width: 80%;
+  font-weight: bold;
+  margin: auto;
+  text-align: right
+}
+
+label {
+  display: inline-block;
+  width: 100px;
+}
+
+footer h6 {
+  text-align: center;
+}
+
+table {
+  margin: 80px auto;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+
+}
+.checkbox label {
+  width: auto;
+}
+#hobbies {
+  width: 100px !important;
+}
+
+img{
+  width: 100px;
+  height: 100px;
+}
+#age{
+  border-left: 8px red solid;
+  border-right: 8px red solid;
+}
+#course{
+  border-left: 8px red solid;
+  border-right: 8px red solid;
+}
+#balance{
+  border-left: 8px red solid;
+  border-right: 8px red solid;
+}

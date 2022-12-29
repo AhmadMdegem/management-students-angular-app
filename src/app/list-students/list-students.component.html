@@ -1,0 +1,15 @@
+<div>
+  <h2 class="student-name">Students</h2>
+  <div class="list-group list-group-numbered">
+    <div
+      *ngFor="let student of students"
+      (click)="onSelectStudent(student)"
+      class="d-flex justify-content-between align-items-start"
+      [ngClass]="{ 'student-name ms-4': selectStudent === student }"
+    >
+      <div class="ms-2 me-auto">
+        <h4>{{ student.firstName + "  " + student.lastName }}</h4>
+      </div>
+    </div>
+  </div>
+</div>
